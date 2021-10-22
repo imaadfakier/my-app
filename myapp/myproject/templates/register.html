@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Sign Up:</h1>
+
+    <style>
+        h5 {
+            color:red;
+        }
+    </style>
+    {#% for error in errors %#}
+    {% for error in messages %}
+        <h5>{{ error }}</h5>
+    {% endfor %}
+
+    <form action="register" method="POST">
+        {% csrf_token %}
+
+        <p>Username:</p>
+        <input type="text" name="username" id="">
+        
+        <p>Email Address:</p>
+        <input type="email" name="email" id="">
+        
+        <p>Password:</p>
+        <input type="password" name="password" id="">
+        
+        <p>Re-Enter Password:</p>
+        <input type="password" name="password-repeat" id="">
+        
+        <br>
+        <br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
