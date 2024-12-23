@@ -84,7 +84,7 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'myproject', 
         'USER': 'postgres', 
-        'PASSWORD': os.environ.get('PASSWORD_FOR_DATEBASE'), 
+        'PASSWORD': os.environ.get('PASSWORD_FOR_DATABASE'), 
         'HOST': 'localhost',
     }
 }
